@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
-import Navbar from './Navbar'  // Новый компонент навигации
+import Navbar from './components/Navbar'
 
 function App() {
   const { i18n } = useTranslation()
@@ -13,16 +13,18 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Navbar changeLanguage={changeLanguage} />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </div>
+      <main className="container py-5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </>
   )
 }
 
 export default App
+
