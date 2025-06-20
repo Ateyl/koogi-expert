@@ -1,6 +1,13 @@
 {
-    "home_title": "Welcome to Our Furniture Gallery",
-    "gallery": "Gallery",
-    "contact": "Contact Us"
-  }
-  
+  "gallery": "Gallery",
+  "contact": "Contact Us",
+  "home_title": "Tailor-Made Kitchens for Your Home",
+  "home_description": "We design and build high-quality kitchen furniture tailored to your needs.",
+  "view_gallery": "View Gallery",
+  "feature_design": "Modern Design",
+  "feature_design_desc": "Customized solutions that fit your space perfectly.",
+  "feature_quality": "Top Quality",
+  "feature_quality_desc": "We use only premium materials and hardware.",
+  "feature_support": "Reliable Support",
+  "feature_support_desc": "We accompany you through every step of the process."
+}

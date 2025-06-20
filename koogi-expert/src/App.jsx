@@ -1,33 +1,21 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import Navbar from './Navbar'  // Новый компонент навигации
 
 function App() {
-  const { t, i18n } = useTranslation()  // Получаем доступ к t и i18n
+  const { i18n } = useTranslation()
 
   function changeLanguage(lang) {
-    i18n.changeLanguage(lang)  // Меняем язык
+    i18n.changeLanguage(lang)
   }
 
   return (
     <div>
-      {/* Переключатель языков */}
-      <nav style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={() => changeLanguage('en')}>EN</button>
-        <button onClick={() => changeLanguage('ru')}>RU</button>
-        <button onClick={() => changeLanguage('ee')}>EE</button>
-      </nav>
+      <Navbar changeLanguage={changeLanguage} />
 
-      {/* Навигация */}
-      <nav style={{ display: 'flex', gap: '10px' }}>
-        <Link to="/">{t('home_title')}</Link>
-        <Link to="/gallery">{t('gallery')}</Link>
-        <Link to="/contact">{t('contact')}</Link>
-      </nav>
-
-      {/* Маршруты */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
